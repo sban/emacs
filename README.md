@@ -195,7 +195,7 @@ And this code at the end of the document:
 
 ```
 bibliographystyle:plain
-bibliography:/Users/sba/Dropbox/MISC/emacs/bib/ref.bib
+bibliography:/Users/XXX/Dropbox/MISC/emacs/bib/ref.bib
 ```
 
 Finally, to install a spelling program, use Homebrew to install ispell
