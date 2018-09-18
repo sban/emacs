@@ -198,6 +198,30 @@ bibliographystyle:plain
 bibliography:/Users/sba/Dropbox/MISC/emacs/bib/ref.bib
 ```
 
+Finally, to install a spelling program, use Homebrew to install ispell
 
+```
+$ brew install ispell
+```
+
+And add the following code to your .emacs file
+
+```
+;;---------------------------------------------------------------------------
+;; ++     SPELLING
+;;---------------------------------------------------------------------------
+(setq ispell-program-name "/path/to/ispell")
+
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+
+(global-set-key (kbd "<f8>") 'ispell-word)
+(defun flyspell-check-next-highlighted-word ()
+  "Custom function to spell check next highlighted word"
+  (interactive)
+  (flyspell-goto-next-error)
+  (ispell-word))
+(global-set-key (kbd "M-<f8>") 'flyspell-check-next-highlighted-word)
+```
 
 
