@@ -6,7 +6,7 @@ Install the package manager *homebrew*. Type the following code in the your term
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Homebrew stores all programs in a folder named  'Celler' typically located at =/usr/local/Cellar=. The path is important as we later need to tell emacs where R is located.
+Homebrew stores all programs in a folder named  'Celler' typically located at /usr/local/Cellar. The path is important as we later need to tell emacs where R is located.
 
 3. Install *emacs* with homebrew. Type:
 ```
