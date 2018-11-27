@@ -83,6 +83,26 @@ Insert the following text to have a more smooth interface:
        ;; ("org" . "http://orgmode.org/elpa/")
        ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
 (package-initialize)
+
+;;---------------------------------------------------------------------------
+;; ++     Keybord-Mac-Stuff
+;;---------------------------------------------------------------------------
+(defun insert-backs ()  
+    "insert back-slash"
+    (interactive)
+    (insert "\\ "))
+
+;; Enten dur højre ALT og venstre er META
+;(setq mac-option-key-is-meta t)
+;(setq mac-right-option-modifier nil)
+;(global-set-key (kbd "M-:") 'insert-backs)
+
+;; Alternativt kan option sættes til CMD
+(setq mac-option-modifier nil
+mac-command-modifier 'meta
+x-select-enable-clipboard t)
+
+(global-set-key (kbd "C-z ") 'undo)
 ```
 
 Type "C-x-C-s" to save the file and then re-load your .emacs file by typing "M-x load-file"
