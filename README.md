@@ -45,7 +45,10 @@ Insert the following text to have a more smooth interface:
 ;; global line number 
  (global-linum-mode t)
 
- ;; THEMES
+;; delete seleted text when typing
+(delete-selection-mode t)  
+
+;; THEMES
  (load-theme 'misterioso)
  (menu-bar-mode -1)
  (tool-bar-mode -1)
