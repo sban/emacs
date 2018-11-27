@@ -92,16 +92,17 @@ Insert the following text to have a more smooth interface:
     (interactive)
     (insert "\\ "))
 
-;; Enten dur højre ALT og venstre er META
+;; Right option is ALT and left is META
 ;(setq mac-option-key-is-meta t)
 ;(setq mac-right-option-modifier nil)
 ;(global-set-key (kbd "M-:") 'insert-backs)
 
-;; Alternativt kan option sættes til CMD
+;; M is set to CMD (much easier)
 (setq mac-option-modifier nil
 mac-command-modifier 'meta
 x-select-enable-clipboard t)
 
+;; CTR+z is undo
 (global-set-key (kbd "C-z ") 'undo)
 ```
 
