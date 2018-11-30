@@ -178,6 +178,12 @@ Include the following code in your .emacs file
      (comint-truncate-buffer)
      (setq comint-buffer-maximum-size old-max))) 
  (global-set-key  (kbd "\C-x c") 'clear-shell)
+ 
+ ;; Autocomplete
+(require 'auto-complete-config)
+(ac-config-default)
+(setq ess-use-auto-complete t)
+ 
 ```
 
 # Setting up LaTeX
