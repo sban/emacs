@@ -74,7 +74,6 @@ Insert the following text to have a more smooth interface:
  (setq backup-inhibited t)
 ;disable auto save
  (setq auto-save-default nil)
-#+END_src
 
 ;; Hide mode-line
 (setq-default mode-line-format nil)
