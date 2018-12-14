@@ -104,8 +104,8 @@ Version 2016-06-15"
                (setq $i n)))
       (setq $i (1+ $i)))))
 
-(global-set-key (kbd "M-n") 'xah-backward-block)
-(global-set-key (kbd "M-p") 'xah-forward-block)
+(global-set-key (kbd "M-p") 'xah-backward-block)
+(global-set-key (kbd "M-n") 'xah-forward-block)
 
 ;;-------------------------------------------------------------------------------------------------
 ;; ++     Repro's
