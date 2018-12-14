@@ -15,6 +15,9 @@ $ brew install emacs --with-cocoa
 $ alias emacs="/usr/local/Cellar/emacs/26.1_1/Emacs.app/Contents/MacOS/Emacs -nw"
 ```
 
+Alternative, you can download it here https://emacsformacosx.com/ (with no extras).
+
+
 
 4. Open your version of GNU Emacs and locate the .emacs-file 
 Open your Emacs application and type "c-x-c-f" to open a file and then type ".emacs". If the file does not allready exist, Emacs will create it.
