@@ -210,6 +210,9 @@ Include the following code in your .emacs file:
 (setq TeX-save-query nil)
 ;(setq TeX-PDF-mode t)
 
+(setenv "PATH" (concat (getenv "PATH") ":/Library/Tex/texbin/"))
+(setq exec-path (append exec-path '(/Library/Tex/texbin/"))
+
 (setq org-latex-pdf-process '("latexmk -pdflatex='%latex -shell-escape -interaction nonstopmode' -pdf -output-directory=%o -f %f"))
 ```
 
