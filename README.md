@@ -51,6 +51,9 @@ Insert the following text to have a more smooth interface:
 ;; delete seleted text when typing
 (delete-selection-mode t)  
 
+;; remove beeps
+(setq visible-bell 1)
+
 ;; THEMES
  (load-theme 'misterioso)
  (menu-bar-mode -1)
