@@ -51,8 +51,12 @@ Insert the following text to have a more smooth interface:
 ;; delete seleted text when typing
 (delete-selection-mode t)  
 
-;; remove beeps
-(setq visible-bell 1)
+;; remove beeps and flash mode-line instead
+(setq visible-bell nil
+      ring-bell-function 'flash-mode-line)
+(defun flash-mode-line ()
+  (invert-face 'mode-line)
+  (run-with-timer 0.1 nil #'invert-face 'mode-line))
 
 ;; THEMES
  (load-theme 'misterioso)
