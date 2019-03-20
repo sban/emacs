@@ -58,6 +58,12 @@ Insert the following text to have a more smooth interface:
   (invert-face 'mode-line)
   (run-with-timer 0.1 nil #'invert-face 'mode-line))
 
+;; WINDOWS MANAGEMENT
+(global-set-key (kbd "<C-M-up>") 'shrink-window)
+(global-set-key (kbd "<C-M-down>") 'enlarge-window)
+(global-set-key (kbd "<C-M-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-M-right>") 'enlarge-window-horizontally)
+
 ;; THEMES
  (load-theme 'misterioso)
  (menu-bar-mode -1)
