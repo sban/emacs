@@ -302,13 +302,23 @@ And add the following code to your .emacs file
 ```
 
 # Python
-To enable python programming install elpy (using m-x list-programs) and insert the following code into your .emacs file:
+To enable python programming install elpy (using m-x list-programs).
+
+To enable natural language processing (NLP) install nltk using pip in the terminal
+```
+ $ pip install nltk
+```
+
+
+Insert the following code into your .emacs file:
 
 ```
 ;;---------------------------------------------------------------------------
 ;; ++    PYTHON
 ;;---------------------------------------------------------------------------
 (elpy-enable)
+
+(setq python-shell-interpreter "/usr/local/bin/python")
 
 (setq python-shell-completion-native-enable nil)
 
