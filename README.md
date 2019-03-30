@@ -301,7 +301,7 @@ And add the following code to your .emacs file
 (global-set-key (kbd "M-<f8>") 'flyspell-check-next-highlighted-word)
 ```
 
-
+# Python
 To enable python programming install elpy (using m-x list-programs) and insert the following code into your .emacs file:
 
 ```
