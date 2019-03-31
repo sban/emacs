@@ -319,5 +319,5 @@ Insert the following code into your .emacs file:
 (elpy-enable)
 (setq elpy-rpc-python-command "python3")
 (setq python-shell-interpreter "/usr/local/bin/python3")
-
+(setq org-babel-python-command "/usr/local/bin/python3")
 ```
