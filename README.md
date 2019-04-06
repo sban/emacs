@@ -230,6 +230,13 @@ Include the following code in your .emacs file:
 (setq exec-path (append exec-path '(/Library/Tex/texbin/"))
 
 (setq org-latex-pdf-process '("latexmk -pdflatex='%latex -shell-escape -interaction nonstopmode' -pdf -output-directory=%o -f %f"))
+
+;; Automatic latex-template when creating a .tex file
+(auto-insert-mode)
+(setq auto-insert-directory "/Users/stefan/Dropbox/MISC/emacs/templates/")
+(setq auto-insert-query nil)
+(define-auto-insert "\\.tex$" "my-latex-template.tex")
+
 ```
 
 # Setting up org-mode
