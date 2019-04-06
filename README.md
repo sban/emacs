@@ -40,6 +40,9 @@ Insert the following text to have a more smooth interface:
 (when (display-graphic-p)
   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
 
+;; Set my default folder
+(setq default-directory "~/Dropbox/" )
+
 ;; line wrap (text mode only)
  (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
  (global-visual-line-mode 1)
