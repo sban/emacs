@@ -202,6 +202,13 @@ Include the following code in your .emacs file
 (ac-config-default)
 (setq ess-use-auto-complete t)
  
+;; Make the arrow keys refer to previous commands
+(defun my-ess-mode-hook ()
+(local-set-key '[up] 'comint-previous-input)
+(local-set-key '[down] 'comint-next-input))
+
+(add-hook 'inferior-ess-mode-hook 'my-ess-mode-hook) 
+ 
 ```
 
 # Setting up LaTeX
