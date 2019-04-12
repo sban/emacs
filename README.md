@@ -94,6 +94,10 @@ Insert the following text to have a more smooth interface:
 ;; Hide mode-line
 (setq-default mode-line-format nil)
 
+;;---------------------------------------------------------------------------
+;; ++     Movement-Stuff
+;;---------------------------------------------------------------------------
+
 ;; Move between paragraphs
 (defun xah-forward-block (&optional n)
   "Move cursor beginning of next text block.
@@ -122,6 +126,10 @@ Version 2016-06-15"
 
 (global-set-key (kbd "M-p") 'xah-backward-block)
 (global-set-key (kbd "M-n") 'xah-forward-block)
+
+;; Avy for jumping to visible text using a char-based decision tree
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "M-g w") 'avy-goto-word-1)
 
 ;;-------------------------------------------------------------------------------------------------
 ;; ++     Repro's
