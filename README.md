@@ -28,7 +28,6 @@ Insert the following text to have a more smooth interface:
 ;;-------------------------------------------------------------------------------------------------
 ;; ++     Personal info
 ;;-------------------------------------------------------------------------------------------------
-
 (setq user-full-name "Mr XXX XXX"
       user-mail-address "XXX@XXX.XX")
 
@@ -91,8 +90,12 @@ Insert the following text to have a more smooth interface:
 ;disable auto save
  (setq auto-save-default nil)
 
-;; Hide mode-line
-(setq-default mode-line-format nil)
+;; Modeline customization
+; Only show file name for buffer
+(setq-default mode-line-format '(
+	      "%f"))
+; Hide mode-line
+;(setq-default mode-line-format nil)
 
 ;;---------------------------------------------------------------------------
 ;; ++     Movement-Stuff
