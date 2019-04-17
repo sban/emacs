@@ -203,7 +203,7 @@ Include the following code in your .emacs file
      (setq comint-buffer-maximum-size 0)
      (comint-truncate-buffer)
      (setq comint-buffer-maximum-size old-max))) 
- (global-set-key  (kbd "\C-x c") 'clear-shell)
+ (global-set-key  (kbd "\C-x y") 'clear-shell)
  
  ;; Autocomplete
 (require 'auto-complete-config)
