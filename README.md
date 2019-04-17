@@ -252,6 +252,11 @@ Include the following code in your .emacs file:
 (setq auto-insert-query nil)
 (define-auto-insert "\\.tex$" "my-latex-template.tex")
 
+;;  AUCTeX has an auto-complete function
+(add-hook 'LaTeX-mode-hook
+      (lambda()
+        (local-set-key [C-tab] 'TeX-complete-symbol)))
+
 ```
 
 # Setting up org-mode
