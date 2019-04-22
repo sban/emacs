@@ -34,13 +34,13 @@ Insert the following text to have a more smooth interface:
 ;;-------------------------------------------------------------------------------------------------
 ;; ++     Settings
 ;;-------------------------------------------------------------------------------------------------
+;; Set my default folder
+(setq default-directory "~/Dropbox/" )
+
 ;; Set til UTF-8
 (prefer-coding-system 'utf-8)
 (when (display-graphic-p)
   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
-
-;; Set my default folder
-(setq default-directory "~/Dropbox/" )
 
 ;; line wrap (text mode only)
  (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
@@ -48,12 +48,11 @@ Insert the following text to have a more smooth interface:
  (setq org-startup-indented t) 
 
 ;; global line number 
- (global-linum-mode t)
-
+(global-linum-mode t)
 ;; delete seleted text when typing
 (delete-selection-mode t)  
 
-;; remove beeps and flash mode-line instead
+;; remove beeps
 (setq visible-bell nil
       ring-bell-function 'flash-mode-line)
 (defun flash-mode-line ()
@@ -75,7 +74,7 @@ Insert the following text to have a more smooth interface:
  (show-paren-mode)
  (global-hl-line-mode)
  (winner-mode t)
- 
+
  ;; Start "blank"
   (setf inhibit-splash-screen t)
   (switch-to-buffer (get-buffer-create "new"))
@@ -91,11 +90,36 @@ Insert the following text to have a more smooth interface:
  (setq auto-save-default nil)
 
 ;; Modeline customization
-; Only show file name for buffer
-(setq-default mode-line-format '(
-	      "%f"))
-; Hide mode-line
+(setq-default mode-line-format
+   (list
+    ;; Current buffer name
+    "%b "
+    ;; Major mode
+    "[%m] "
+    ;; Modified status
+    "[%*] "
+    ;; Cursor position
+    "Line: %l/%i"))
+;; for "file: %f "
+
+; Or just hide mode-line
 ;(setq-default mode-line-format nil)
+
+;; CTR+z is undo
+(global-set-key (kbd "C-z ") 'undo)
+
+;; Zoom
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+
+;; Marking text
+(delete-selection-mode t)
+(transient-mark-mode t)
+(setq x-select-enable-clipboard t)
+
+;; Removing trailing spaces + remap for Mac-users
+(global-set-key (kbd "M-S-SPC ") 'just-one-space)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;;---------------------------------------------------------------------------
 ;; ++     Movement-Stuff
