@@ -378,3 +378,52 @@ Insert the following code into your .emacs file:
 (setq python-shell-interpreter "/usr/local/bin/python3")
 (setq org-babel-python-command "/usr/local/bin/python3")
 ```
+
+Other addition features:
+
+;;---------------------------------------------------------------------------
+;; ++    ORG-BABEL
+;;---------------------------------------------------------------------------
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (emacs-lisp . t)
+   (org . t)
+   (shell . t)
+   (python . t)
+   (gnuplot . t)
+   (R . t)
+   (latex . t)
+   (dot . t)
+   (awk . t)
+   ))
+
+(org-download-enable)
+
+(setq org-startup-align-all-tables t)
+(org-table-map-tables 'org-table-iterate)
+
+;;---------------------------------------------------------------------------
+;; ++   Writer-Mode
+;;---------------------------------------------------------------------------
+(defun writing-mode ()
+  (interactive)
+  (setq buffer-face-mode-face '(:family "Monospace" :height 250))
+  (buffer-face-mode)
+  (linum-mode 0)
+  (writeroom-mode 1)
+  (blink-cursor-mode)
+  (visual-line-mode 1)
+  (setq truncate-lines nil)
+  (setq-default line-spacing 10)
+ (setq global-hl-line-mode nil)
+ )
+
+(with-eval-after-load 'writeroom-mode
+  (define-key writeroom-mode-map (kbd "C-M-æ") #'writeroom-decrease-width)
+  (define-key writeroom-mode-map (kbd "C-M-ø") #'writeroom-increase-width)
+  (define-key writeroom-mode-map (kbd "C-M-=") #'writeroom-adjust-width))
+
+;; Calender
+(require 'calfw)
+(require 'calfw-org)
