@@ -125,6 +125,18 @@ Insert the following text to have a more smooth interface:
 ;; ++     Movement-Stuff
 ;;---------------------------------------------------------------------------
 
+;; Move between punctuation and comma
+(defun xah-forward ()
+  (interactive)
+  (re-search-forward "\\.+\\|,+\\|;+" nil t))
+
+(defun xah-backward ()
+  (interactive)
+  (re-search-backward "\\.+\\|,+\\|;+" nil t))
+
+(global-set-key (kbd "C-æ") 'xah-backward)
+(global-set-key (kbd "C-ø") 'xah-forward)
+
 ;; Move between paragraphs
 (defun xah-forward-block (&optional n)
   "Move cursor beginning of next text block.
