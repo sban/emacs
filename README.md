@@ -163,8 +163,8 @@ Version 2016-06-15"
                (setq $i n)))
       (setq $i (1+ $i)))))
 
-(global-set-key (kbd "M-p") 'xah-backward-block)
-(global-set-key (kbd "M-n") 'xah-forward-block)
+(global-set-key (kbd "M-æ") 'xah-backward-block)
+(global-set-key (kbd "M-ø") 'xah-forward-block)
 
 ;; Avy for jumping to visible text using a char-based decision tree
 (global-set-key (kbd "C-:") 'avy-goto-char)
