@@ -228,12 +228,14 @@ To run R inside Emacs we need to install ESS. To do this, we need to download an
 Include the following code in your .emacs file
 
 ```
-;;-------------------------------------------------------------------------------------------------
-;; ++     R
-;;-------------------------------------------------------------------------------------------------
-(setq ess-ask-for-ess-directory nil) 
-(setq ess-local-process-name "R") 
-(setq-default inferior-R-program-name "/usr/local/Cellar/r/3.5.1/bin/R")
+;;----------------------------------------------------------
+;; ++     ESS: R
+;;----------------------------------------------------------
+(setq ess-ask-for-ess-directory nil)
+(setq ess-local-process-name "R")
+(setq-default inferior-R-program-name "/usr/local/Cellar/r/3.5.2_2/bin/R")
+(require 'ess-site)
+(setq ess-eval-visibly 'nowait)
 
 ;; Clear console
 (defun clear-shell ()
