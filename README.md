@@ -173,13 +173,11 @@ Version 2016-06-15"
 ;;-------------------------------------------------------------------------------------------------
 ;; ++     Repro's
 ;;-------------------------------------------------------------------------------------------------
-(setq package-archives (append package-archives
-       '(("melpa" . "http://melpa.org/packages/")
-       ("marmalade" . "http://marmalade-repo.org/packages/")
-       ("gnu" . "http://elpa.gnu.org/packages/")
-       ;; ("org" . "http://orgmode.org/elpa/")
-       ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
-(package-initialize)
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa.milk" . "http://melpa.org/packages/") t) )
+
 
 ;;---------------------------------------------------------------------------
 ;; ++     Keybord-Mac-Stuff
