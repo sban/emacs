@@ -155,6 +155,9 @@ Insert the following text to have a more smooth interface:
 (centaur-tabs-mode t)
 (global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
 (global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
+(setq centaur-tabs-style "box")
+(setq centaur-tabs-set-icons t)
+(setq centaur-tabs-set-modified-marker t)
 
 ;;---------------------------------------------------------------------------
 ;; ++     Movement-Stuff
