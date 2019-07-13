@@ -273,6 +273,9 @@ Include the following code in your .emacs file
 (require 'ess-site)
 (setq ess-eval-visibly 'nowait)
 
+;;;; create a new frame for each help instance
+(setq ess-help-own-frame t)
+
 ;; Clear console
 (defun clear-shell ()
    (interactive)
