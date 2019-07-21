@@ -298,6 +298,19 @@ Include the following code in your .emacs file
 (add-hook 'inferior-ess-mode-hook 'my-ess-mode-hook) 
  
 ```
+R will start but produces some errors. To avioid these modify your .Renviron-file:
+
+```
+emacs ~/.Renviron
+```
+
+An change the text to this:
+
+```
+LANGUAGE=dk
+
+LC_ALL = "en_US.UTF-8"
+```
 
 # Setting up LaTeX
 First we need to use Homebrew to install the Tex-compiler:
