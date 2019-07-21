@@ -312,6 +312,20 @@ LANGUAGE=dk
 LC_ALL = "en_US.UTF-8"
 ```
 
+Finally to get rJava to work, we need to create an R profile 
+
+```
+emacs ~/.Profile
+```
+
+that include the following code:
+
+```
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home
+```
+
+Please remeber to change "jdk-10.0.2.jdk" with the version that you have installed on your computer.
+
 # Setting up LaTeX
 First we need to use Homebrew to install the Tex-compiler:
 
