@@ -148,16 +148,12 @@ Insert the following text to have a more smooth interface:
 ;; Show only one active window when opening multiple files at the same time.
 (add-hook 'window-setup-hook 'delete-other-windows)
 
-;;----------------------------------------------------------
-;; ++     TABS
-;;----------------------------------------------------------
-(require 'centaur-tabs)
-(centaur-tabs-mode t)
-(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
-(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
-(setq centaur-tabs-style "box")
-(setq centaur-tabs-set-icons t)
-(setq centaur-tabs-set-modified-marker t)
+;;---------------------------------------------------------------------------
+;; ++     PANDOC
+;;---------------------------------------------------------------------------
+;; Export to MS Word/docx formats
+(add-hook 'markdown-mode-hook 'pandoc-mode)
+(setq pandoc-binary "/usr/local/Cellar/pandoc/2.7.3/bin/pandoc")
 
 ;;---------------------------------------------------------------------------
 ;; ++     Movement-Stuff
