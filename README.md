@@ -295,6 +295,11 @@ Include the following code in your .emacs file
      (setq comint-buffer-maximum-size old-max))) 
  (global-set-key  (kbd "\C-x y") 'clear-shell)
  
+;; Read pdfs outside emacs
+(require 'openwith)
+(openwith-mode t)
+(setq openwith-associations '(("\\.pdf\\'" "open" (file))))
+ 
  ;; Autocomplete
 (require 'auto-complete-config)
 (ac-config-default)
