@@ -164,6 +164,12 @@ Insert the following text to have a more smooth interface:
 (setq pandoc-binary "/usr/local/Cellar/pandoc/2.7.3/bin/pandoc")
 
 ;;---------------------------------------------------------------------------
+;; ++ Dired
+;;---------------------------------------------------------------------------
+; less information about files
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
+
+;;---------------------------------------------------------------------------
 ;; ++     Movement-Stuff
 ;;---------------------------------------------------------------------------
 
